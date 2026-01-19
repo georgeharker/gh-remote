@@ -1,14 +1,13 @@
 # gh-remote Installation Guide
 
+> **GitHub Repository**: https://github.com/georgeharker/gh-remote
+
 ## Quick Start
 
-### 1. Install the extension locally
-
-From the `gh-remote` directory:
+### 1. Install from GitHub (Recommended)
 
 ```bash
-cd gh-remote
-gh extension install .
+gh extension install georgeharker/gh-remote
 ```
 
 ### 2. Verify installation
@@ -31,47 +30,31 @@ gh remote new my-project --private
 gh remote set octocat/hello-world
 ```
 
-## Installation from GitHub (after publishing)
+## Installation from Local Directory (for development)
 
-Once you publish this extension to GitHub, users can install it with:
-
-```bash
-gh extension install <your-username>/gh-remote
-```
-
-## Publishing Steps
-
-To publish this extension to GitHub:
-
-1. Create a new repository on GitHub named `gh-remote`
-
-2. Add the remote and push:
+### 1. Clone the repository
 
 ```bash
+git clone https://github.com/georgeharker/gh-remote.git
 cd gh-remote
-git add .
-git commit -m "Initial commit: gh-remote extension v1.0.0"
-git remote add origin git@github.com:<your-username>/gh-remote.git
-git branch -M main
-git push -u origin main
 ```
 
-3. Users can then install with:
+### 2. Install locally
 
 ```bash
-gh extension install <your-username>/gh-remote
+gh extension install .
 ```
 
 ## Uninstalling
 
 ```bash
-gh extension remove remotes
+gh extension remove remote
 ```
 
 ## Upgrading
 
 ```bash
-gh extension upgrade remotes
+gh extension upgrade georgeharker/gh-remote
 # Or upgrade all extensions:
 gh extension upgrade --all
 ```
@@ -126,9 +109,9 @@ git --version
 # List installed extensions
 gh extension list
 
-# Reinstall
-cd gh-remote
-gh extension install . --force
+# Reinstall from GitHub
+gh extension remove remote
+gh extension install georgeharker/gh-remote
 ```
 
 ### Permission denied

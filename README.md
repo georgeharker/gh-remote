@@ -1,5 +1,7 @@
 # gh-remote
 
+> **GitHub Repository**: https://github.com/georgeharker/gh-remote
+
 A GitHub CLI extension that simplifies repository creation and git remote management with subcommands.
 
 ## Features
@@ -21,12 +23,13 @@ A GitHub CLI extension that simplifies repository creation and git remote manage
 ### Install the extension
 
 ```bash
-gh extension install <your-username>/gh-remote
+gh extension install georgeharker/gh-remote
 ```
 
 ### Install from local directory (for development)
 
 ```bash
+git clone https://github.com/georgeharker/gh-remote.git
 cd gh-remote
 gh extension install .
 ```
