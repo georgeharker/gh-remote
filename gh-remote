@@ -163,7 +163,7 @@ get_ssh_url() {
 is_fork() {
     local repo="$1"
     local parent
-    parent=$(gh repo view "$repo" --json parent -q .parent.nameWithOwner 2>/dev/null)
+    parent=$(gh repo view "$repo" --json parent -q '.parent | if . then "\(.owner.login)/\(.name)" else empty end' 2>/dev/null)
     echo "$parent"
 }
 
